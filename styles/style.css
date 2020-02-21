@@ -21,6 +21,7 @@
     display: flex;
     background-color: #f2f2f2;
     position: relative;
+    overflow: hidden;
 }
 
 .logo {
@@ -67,6 +68,7 @@
 
 .header__link {
   text-decoration: none;
+  color: #2f80ed;
 }
 
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
@@ -118,7 +120,7 @@
   font-weight: normal;
 }
 
-.two-columns__paragraph:nth-child(2) {
+.two-columns__paragraph:nth-child(2n) {
   margin-top: 30px;
   margin-bottom: 30px;
 }
@@ -210,6 +212,7 @@
   font-size: 36px;
   font-weight: normal;
   text-decoration: none;
+  color: #000;
 }
 
 .kaufman {
@@ -220,7 +223,7 @@
   overflow: hidden;
 }
 
-.section-title_theme-dark {
+.section-title_theme_dark {
   color: #fff;
 }
 
@@ -252,6 +255,7 @@
    min-height: 350px;
    background-color: #1f1f1f;
    position: relative;
+   padding: 60px 0 40px;
  }
 
 .footer__columns {
@@ -259,17 +263,12 @@
   display: flex;
   justify-content: space-between;
   margin: auto;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  padding: 60px 0 40px;
 }
 
 .footer__column {
   display: flex;
   flex-direction: column;
+  min-height: 237px;
 }
 
 .footer__column_content_copyright {
@@ -299,7 +298,7 @@
   margin-top: 0;
 }
 
-.footer__column_link {
+.footer__column-link {
   color: #fff;
   text-decoration: none;
   line-height: 30px;
@@ -307,7 +306,13 @@
   font-weight: normal;
 }
 
-.footer__social_icon {
+.footer__column-links {
+  padding: 0;
+  list-style: none;
+  margin-top: 0;
+}
+
+.footer__social-icon {
   margin-right: 10px;
   width: 16px;
   height: 16px;
