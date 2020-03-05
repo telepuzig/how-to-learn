@@ -2,6 +2,16 @@
   box-sizing: border-box;
 }
 
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
 .page {
     min-width: 1100px;
     /* мы ещё не умеем делать мобильную версию сайта, */
@@ -69,6 +79,11 @@
 .header__link {
   text-decoration: none;
   color: #2f80ed;
+  transition: all .1s linear;
+}
+
+.header__link:hover {
+  opacity: .5;
 }
 
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
@@ -79,6 +94,8 @@
     right: 0;
     top: 64px;
     background-color: #2F80ED;
+    transform: rotate(-15deg);
+    animation: rotation linear 20s infinite;
 }
 
 /* и элемента с модификатором вида ключ-значение */
@@ -99,6 +116,7 @@
   width: 80%;
   display: flex;
   justify-content: space-between;
+  margin: 0 auto;
 }
 
 .two-columns__brief {
@@ -107,6 +125,7 @@
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
+  margin-top: 0;
 }
 
 .two-columns__main-text {
@@ -120,6 +139,10 @@
   font-weight: normal;
 }
 
+.two-columns__paragraph:first-of-type {
+  margin-top: 0;
+}
+
 .two-columns__paragraph:nth-child(2n) {
   margin-top: 30px;
   margin-bottom: 30px;
@@ -127,6 +150,10 @@
 
 .two-columns__span-accent {
   font-weight: bold;
+}
+
+.digits {
+  margin: 100px 0;
 }
 
 .section-title {
@@ -175,20 +202,158 @@
   font-weight: normal;
 }
 
+
+.khan {
+  background-color: #f2f2f2;
+  padding-top: 105px;
+}
+
+.khan__container {
+  width: 80%;
+  margin: auto;
+}
+
+.khan__author {
+  margin: 0;
+  line-height: 42px;
+  font-size: 30px;
+  font-weight: normal;
+}
+
+.khan__title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.khan__quote {
+  width: 790px;
+  margin: 50px 0 0;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.khan__quote-author {
+  margin: 36px 0 0;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.khan__quote-author-subline {
+  margin: 10px 0 68px;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.khan__book-container {
+  display: flex;
+}
+
+.khan__book-pic {
+  background-image: url(../images/book.jpg);
+  width: 620px;
+  height: 608px;
+  background-size: cover;
+  margin-right: 20px;
+}
+
+.khan__buy-link {
+  text-decoration: none;
+  color: #2f80ed;
+  line-height: 42px;
+  font-size: 30px;
+  font-weight: normal;
+  transition: all .1s linear;
+}
+
+.khan__buy-link:hover {
+  opacity: 0.5;
+}
+
+.technics {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.cards {
+  width: 920px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 240px);
+  grid-column-gap: 100px;
+}
+
+.cards__item {
+  width: 240px;
+}
+
+.cards__image {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  margin: 60px 40px 43px;
+}
+
+.cards__title {
+  text-align: center;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.cards__description {
+  text-align: center;
+  line-height: 23px;
+  font-size: 18px;
+  font-weight: normal;
+  margin: 16px 0 0;
+}
+
+.video {
+  margin-top: 100px;
+}
+
+.video__frames {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 50px;
+}
+
+.video__iframe {
+  margin-right: 20px;
+}
+
+.video__iframe:last-of-type {
+  margin-right: 0;
+}
+
+.oakley {
+  background-color: #f2f2f2;
+  padding: 160px 0 0px;
+}
+
+
+
+
 .feinman {
   position: relative;
-  height: 760px;
+  height: 790px;
   background-color: #f2f2f2;
   background-image: url('../images/feinman.png');
   background-repeat: no-repeat;
   background-size: 867px 637px;
   background-position: bottom left;
-  margin-top: 100px;
 }
 
 .feinman__title {
   width: 648px;
-  padding-top: 100px;
+  padding-top: 80px;
   margin: 0 auto;
   text-align: center;
   line-height: 1.15;
@@ -213,6 +378,11 @@
   font-weight: normal;
   text-decoration: none;
   color: #000;
+  transition: all .1s linear;
+}
+
+.feinman__link:hover {
+  opacity: .5;
 }
 
 .kaufman {
@@ -225,10 +395,14 @@
 
 .section-title_theme_dark {
   color: #fff;
+  position: relative;
+  z-index: 1;
 }
 
 .section-subtitle_theme_dark {
   color: #fff;
+  position: relative;
+  z-index: 1;
 }
 
 .table_theme_dark {
@@ -249,7 +423,24 @@
    position: absolute;
    top: 0;
    right: -210px;
+   animation: rotation linear 20s infinite;
  }
+
+
+ .resources {
+   margin: 100px 0 217px;
+}
+
+.resources__logo-zone {
+  margin: 80px auto 0;
+  width: 1100px;
+}
+
+.resources__logo {
+  width: 270px;
+  height: 38px;
+}
+
 
  .footer {
    min-height: 350px;
@@ -304,6 +495,11 @@
   line-height: 30px;
   font-size: 18px;
   font-weight: normal;
+  transition: all .1s linear;
+}
+
+.footer__column-link:hover {
+  opacity: .5;
 }
 
 .footer__column-links {

@@ -1,0 +1,10 @@
+@import url('./_theme/_dark/section-title_theme_dark.css');
+
+.section-title {
+  width: 60%;
+  text-align: center;
+  margin: auto;
+  line-height: 69px;
+  font-size: 60px;
+  font-weight: bold;
+}
