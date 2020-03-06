@@ -4,7 +4,7 @@
 @import url('./__title/cards__title.css');
 
 .cards {
-  width: 920px;
+  max-width: 920px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fill, 240px);

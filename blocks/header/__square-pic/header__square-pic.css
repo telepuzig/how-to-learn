@@ -7,4 +7,5 @@
   top: 64px;
   background-color: #2F80ED;
   transform: rotate(-15deg);
+  animation: rotation_square linear 20s infinite;
 }
